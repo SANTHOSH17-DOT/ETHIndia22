@@ -2,12 +2,12 @@ specVersion: 0.0.5
 schema:
   file: schema.graphql
 dataSources:
-  - kind: ethereum
-    name: Cid
+  - kind: ethereum/contract
+    name: File
     network: goerli
     source:
-      address: "0xa69aF20eF18Bf6Fea5A5235b37615061cD6c699B"
-      abi: Cid
+      address: "0xEf872c3e1Cb4E42f221D91566A6652CF635fAAB3"
+      abi: File
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -16,9 +16,28 @@ dataSources:
         - User
         - File
       abis:
-        - name: Cid
-          file: Cid\abis\Cid.json
+        - name: File
+          file: File\abis\File.json
       eventHandlers:
         - event: fileUploaded(string,address,string,string,uint256,uint256)
           handler: handleFileUpload
-      file: Cid\Cid.wasm
+      file: File\File.wasm
+  - kind: ethereum/contract
+    name: UserFunctions
+    network: goerli
+    source:
+      address: "0x113b6185ad87a2708a30198cf414EC5D307b04a2"
+      abi: UserFunctions
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - User
+      abis:
+        - name: UserFunctions
+          file: UserFunctions\abis\userFunctions.json
+      eventHandlers:
+        - event: userAdded(address)
+          handler: handleAddUser
+      file: UserFunctions\UserFunctions.wasm

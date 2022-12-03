@@ -1,4 +1,4 @@
-import {fileUploaded} from "../generated/Cid/Cid"
+import {fileUploaded} from "../generated/File/File"
 import {User,File} from "../generated/schema"
 
 export function handleFileUploaded(event: fileUploaded): void {

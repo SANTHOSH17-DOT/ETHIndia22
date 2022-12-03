@@ -36,8 +36,7 @@
         }
       ],
       "name": "fileUploaded",
-      "type": "event",
-      "signature": "0x8df9420cffd6cb5150ba152fe465c4eed729479f0faa1d389fd181b74e6e73a6"
+      "type": "event"
     }
   ],
   "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a7230582037e0f52bd52c7e11540ae69132b80d60a47f7b492fe4ea9c06604c4fb157069d0029",
@@ -829,6 +828,12 @@
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {
+    "5": {
+      "events": {},
+      "links": {},
+      "address": "0x47b342F799d43404aDf06E03F9824d0293D84167",
+      "transactionHash": "0xf058548727552ab83612faaf1469c19da5862d7724475dc30c306f8952dbd72b"
+    },
     "5777": {
       "events": {},
       "links": {},
@@ -837,7 +842,7 @@
     }
   },
   "schemaVersion": "3.0.2",
-  "updatedAt": "2022-12-03T05:54:48.106Z",
+  "updatedAt": "2022-12-03T14:43:01.754Z",
   "devdoc": {
     "methods": {}
   },

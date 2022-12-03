@@ -1,7 +1,10 @@
 {
   "goerli": {
     "Cid": {
-      "address": "0xa69aF20eF18Bf6Fea5A5235b37615061cD6c699B"
+      "address": "0xEf872c3e1Cb4E42f221D91566A6652CF635fAAB3"
+    },
+    "Contract": {
+      "address": "0xEf872c3e1Cb4E42f221D91566A6652CF635fAAB3"
     }
   }
 }

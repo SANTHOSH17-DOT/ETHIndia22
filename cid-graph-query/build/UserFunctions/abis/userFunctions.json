@@ -1,0 +1,63 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "userAdded",
+    "type": "event",
+    "signature": "0x6bda722b0c3246f6ab28656c881bcc965fcfa5819f23788ac625429a6fcae7a4"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "cid",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "fileType",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "createdAt",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "updatedAt",
+        "type": "uint256"
+      }
+    ],
+    "name": "fileUploaded",
+    "type": "event",
+    "signature": "0x8df9420cffd6cb5150ba152fe465c4eed729479f0faa1d389fd181b74e6e73a6"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "AddUser",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf7e691dd"
+  }
+]

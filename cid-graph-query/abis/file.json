@@ -1,0 +1,37 @@
+[{
+  "anonymous": false,
+  "inputs": [{
+      "indexed": false,
+      "name": "cid",
+      "type": "string"
+    },
+    {
+      "indexed": false,
+      "name": "user",
+      "type": "address"
+    },
+    {
+      "indexed": false,
+      "name": "fileType",
+      "type": "string"
+    },
+    {
+      "indexed": false,
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "indexed": false,
+      "name": "createdAt",
+      "type": "uint256"
+    },
+    {
+      "indexed": false,
+      "name": "updatedAt",
+      "type": "uint256"
+    }
+  ],
+  "name": "fileUploaded",
+  "type": "event",
+  "signature": "0x8df9420cffd6cb5150ba152fe465c4eed729479f0faa1d389fd181b74e6e73a6"
+}]
