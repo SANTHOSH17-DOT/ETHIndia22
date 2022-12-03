@@ -1,28 +1,9 @@
 pragma solidity >=0.4.22 <0.9.0;
 pragma experimental ABIEncoderV2;
+import "./User.sol";
 
-contract Cid {
-    mapping(address => User) users;
-
-    struct User {
-        File[] files;
-    }
-    struct File {
-        string fileType;
-        string name;
-        string cid;
-        bool isUploaded;
-        uint256 createdAt;
-        uint256 updatedAt;
-    }
-    event fileUploaded(
-        string cid,
-        address user,
-        string fileType,
-        string name,
-        uint256 createdAt,
-        uint256 updatedAt
-    );
+contract Map is User {
+    mapping(address => user) users;
 
     function findFileIndex(address _user, string memory _cid)
         internal
@@ -66,13 +47,19 @@ contract Cid {
         users[msg.sender]
             .files[findFileIndex(msg.sender, _cid)]
             .isUploaded = _success;
-        emit fileUploaded(
-            _cid,
-            msg.sender,
-            users[msg.sender].files[findFileIndex(msg.sender, _cid)].fileType,
-            users[msg.sender].files[findFileIndex(msg.sender, _cid)].name,
-            users[msg.sender].files[findFileIndex(msg.sender, _cid)].createdAt,
-            block.timestamp
-        );
+        if (_success) {
+            emit fileUploaded(
+                _cid,
+                msg.sender,
+                users[msg.sender]
+                    .files[findFileIndex(msg.sender, _cid)]
+                    .fileType,
+                users[msg.sender].files[findFileIndex(msg.sender, _cid)].name,
+                users[msg.sender]
+                    .files[findFileIndex(msg.sender, _cid)]
+                    .createdAt,
+                block.timestamp
+            );
+        }
     }
 }

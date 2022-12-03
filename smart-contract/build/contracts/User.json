@@ -1,0 +1,321 @@
+{
+  "contractName": "User",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "cid",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "fileType",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "createdAt",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "updatedAt",
+          "type": "uint256"
+        }
+      ],
+      "name": "fileUploaded",
+      "type": "event",
+      "signature": "0x8df9420cffd6cb5150ba152fe465c4eed729479f0faa1d389fd181b74e6e73a6"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a723058206777f9b9f9f677dfa4c488de5c36459f9582ba606ae1d2c49472b458838ad9520029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a723058206777f9b9f9f677dfa4c488de5c36459f9582ba606ae1d2c49472b458838ad9520029",
+  "sourceMap": "58:74:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;58:74:3;;;;;;;",
+  "deployedSourceMap": "58:74:3:-;;;;;",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\r\nimport \"./File.sol\";\r\n\r\ncontract User is CID {\r\n    struct user {\r\n        File[] files;\r\n    }\r\n}\r\n",
+  "sourcePath": "G:\\ETHIndia22\\smart-contract\\contracts\\User.sol",
+  "ast": {
+    "absolutePath": "/G/ETHIndia22/smart-contract/contracts/User.sol",
+    "exportedSymbols": {
+      "User": [
+        281
+      ]
+    },
+    "id": 282,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 273,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "absolutePath": "/G/ETHIndia22/smart-contract/contracts/File.sol",
+        "file": "./File.sol",
+        "id": 274,
+        "nodeType": "ImportDirective",
+        "scope": 282,
+        "sourceUnit": 30,
+        "src": "34:20:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 275,
+              "name": "CID",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 29,
+              "src": "75:3:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CID_$29",
+                "typeString": "contract CID"
+              }
+            },
+            "id": 276,
+            "nodeType": "InheritanceSpecifier",
+            "src": "75:3:3"
+          }
+        ],
+        "contractDependencies": [
+          29
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 281,
+        "linearizedBaseContracts": [
+          281,
+          29
+        ],
+        "name": "User",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "User.user",
+            "id": 280,
+            "members": [
+              {
+                "constant": false,
+                "id": 279,
+                "name": "files",
+                "nodeType": "VariableDeclaration",
+                "scope": 280,
+                "src": "109:12:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_File_$14_storage_$dyn_storage_ptr",
+                  "typeString": "struct CID.File[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 277,
+                    "name": "File",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 14,
+                    "src": "109:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_File_$14_storage_ptr",
+                      "typeString": "struct CID.File"
+                    }
+                  },
+                  "id": 278,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "109:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_File_$14_storage_$dyn_storage_ptr",
+                    "typeString": "struct CID.File[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "user",
+            "nodeType": "StructDefinition",
+            "scope": 281,
+            "src": "86:43:3",
+            "visibility": "public"
+          }
+        ],
+        "scope": 282,
+        "src": "58:74:3"
+      }
+    ],
+    "src": "0:134:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/G/ETHIndia22/smart-contract/contracts/User.sol",
+    "exportedSymbols": {
+      "User": [
+        281
+      ]
+    },
+    "id": 282,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 273,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "absolutePath": "/G/ETHIndia22/smart-contract/contracts/File.sol",
+        "file": "./File.sol",
+        "id": 274,
+        "nodeType": "ImportDirective",
+        "scope": 282,
+        "sourceUnit": 30,
+        "src": "34:20:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 275,
+              "name": "CID",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 29,
+              "src": "75:3:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CID_$29",
+                "typeString": "contract CID"
+              }
+            },
+            "id": 276,
+            "nodeType": "InheritanceSpecifier",
+            "src": "75:3:3"
+          }
+        ],
+        "contractDependencies": [
+          29
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 281,
+        "linearizedBaseContracts": [
+          281,
+          29
+        ],
+        "name": "User",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "User.user",
+            "id": 280,
+            "members": [
+              {
+                "constant": false,
+                "id": 279,
+                "name": "files",
+                "nodeType": "VariableDeclaration",
+                "scope": 280,
+                "src": "109:12:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_File_$14_storage_$dyn_storage_ptr",
+                  "typeString": "struct CID.File[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 277,
+                    "name": "File",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 14,
+                    "src": "109:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_File_$14_storage_ptr",
+                      "typeString": "struct CID.File"
+                    }
+                  },
+                  "id": 278,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "109:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_File_$14_storage_$dyn_storage_ptr",
+                    "typeString": "struct CID.File[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "user",
+            "nodeType": "StructDefinition",
+            "scope": 281,
+            "src": "86:43:3",
+            "visibility": "public"
+          }
+        ],
+        "scope": 282,
+        "src": "58:74:3"
+      }
+    ],
+    "src": "0:134:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x0b05e70095911b2eccCd1056F193173F0811339c",
+      "transactionHash": "0x0ecd6a8874bf11e6337240f1602e9a481d065700699a1ddbb7edc8d10c00a432"
+    }
+  },
+  "schemaVersion": "3.0.2",
+  "updatedAt": "2022-12-03T05:11:38.142Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
