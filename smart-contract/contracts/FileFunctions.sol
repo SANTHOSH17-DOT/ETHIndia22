@@ -2,9 +2,7 @@ pragma solidity >=0.4.22 <0.9.0;
 pragma experimental ABIEncoderV2;
 import "./User.sol";
 
-contract Map is User {
-    mapping(address => user) users;
-
+contract FileFunctions is User {
     function findFileIndex(address _user, string memory _cid)
         internal
         view
@@ -31,11 +29,11 @@ contract Map is User {
             "File already exists"
         );
         users[msg.sender].files.push(
-            File(_fileType, name, _cid, false, block.timestamp, block.timestamp)
+            file(_fileType, name, _cid, false, block.timestamp, block.timestamp)
         );
     }
 
-    function getFiles() public view returns (File[] memory) {
+    function getFiles() public view returns (file[] memory) {
         return users[msg.sender].files;
     }
 

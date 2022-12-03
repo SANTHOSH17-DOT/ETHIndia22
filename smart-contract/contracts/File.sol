@@ -1,7 +1,7 @@
 pragma solidity >=0.4.22 <0.9.0;
 
-contract CID {
-    struct File {
+contract File {
+    struct file {
         string fileType;
         string name;
         string cid;

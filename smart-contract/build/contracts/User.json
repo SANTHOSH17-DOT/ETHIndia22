@@ -40,24 +40,24 @@
       "signature": "0x8df9420cffd6cb5150ba152fe465c4eed729479f0faa1d389fd181b74e6e73a6"
     }
   ],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a723058206777f9b9f9f677dfa4c488de5c36459f9582ba606ae1d2c49472b458838ad9520029",
-  "deployedBytecode": "0x6080604052600080fdfea165627a7a723058206777f9b9f9f677dfa4c488de5c36459f9582ba606ae1d2c49472b458838ad9520029",
-  "sourceMap": "58:74:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;58:74:3;;;;;;;",
-  "deployedSourceMap": "58:74:3:-;;;;;",
-  "source": "pragma solidity >=0.4.22 <0.9.0;\r\nimport \"./File.sol\";\r\n\r\ncontract User is CID {\r\n    struct user {\r\n        File[] files;\r\n    }\r\n}\r\n",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a723058203557b05dfbac8e87711557f7bb8835aff03d266fe7af4d6d791d0cf9bcec5e7e0029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a723058203557b05dfbac8e87711557f7bb8835aff03d266fe7af4d6d791d0cf9bcec5e7e0029",
+  "sourceMap": "58:136:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;58:136:3;;;;;;;",
+  "deployedSourceMap": "58:136:3:-;;;;;",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\r\nimport \"./File.sol\";\r\n\r\ncontract User is File {\r\n    address[] userArr;\r\n    struct user {\r\n        file[] files;\r\n    }\r\n    mapping(address => user) users;\r\n}\r\n",
   "sourcePath": "G:\\ETHIndia22\\smart-contract\\contracts\\User.sol",
   "ast": {
     "absolutePath": "/G/ETHIndia22/smart-contract/contracts/User.sol",
     "exportedSymbols": {
       "User": [
-        281
+        284
       ]
     },
-    "id": 282,
+    "id": 285,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 273,
+        "id": 269,
         "literals": [
           "solidity",
           ">=",
@@ -73,9 +73,9 @@
       {
         "absolutePath": "/G/ETHIndia22/smart-contract/contracts/File.sol",
         "file": "./File.sol",
-        "id": 274,
+        "id": 270,
         "nodeType": "ImportDirective",
-        "scope": 282,
+        "scope": 285,
         "sourceUnit": 30,
         "src": "34:20:3",
         "symbolAliases": [],
@@ -87,19 +87,19 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 275,
-              "name": "CID",
+              "id": 271,
+              "name": "File",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 29,
-              "src": "75:3:3",
+              "src": "75:4:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_CID_$29",
-                "typeString": "contract CID"
+                "typeIdentifier": "t_contract$_File_$29",
+                "typeString": "contract File"
               }
             },
-            "id": 276,
+            "id": 272,
             "nodeType": "InheritanceSpecifier",
-            "src": "75:3:3"
+            "src": "75:4:3"
           }
         ],
         "contractDependencies": [
@@ -108,51 +108,88 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 281,
+        "id": 284,
         "linearizedBaseContracts": [
-          281,
+          284,
           29
         ],
         "name": "User",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "constant": false,
+            "id": 275,
+            "name": "userArr",
+            "nodeType": "VariableDeclaration",
+            "scope": 284,
+            "src": "87:17:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 273,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "87:7:3",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 274,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "87:9:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
             "canonicalName": "User.user",
-            "id": 280,
+            "id": 279,
             "members": [
               {
                 "constant": false,
-                "id": 279,
+                "id": 278,
                 "name": "files",
                 "nodeType": "VariableDeclaration",
-                "scope": 280,
-                "src": "109:12:3",
+                "scope": 279,
+                "src": "134:12:3",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_File_$14_storage_$dyn_storage_ptr",
-                  "typeString": "struct CID.File[]"
+                  "typeIdentifier": "t_array$_t_struct$_file_$14_storage_$dyn_storage_ptr",
+                  "typeString": "struct File.file[]"
                 },
                 "typeName": {
                   "baseType": {
                     "contractScope": null,
-                    "id": 277,
-                    "name": "File",
+                    "id": 276,
+                    "name": "file",
                     "nodeType": "UserDefinedTypeName",
                     "referencedDeclaration": 14,
-                    "src": "109:4:3",
+                    "src": "134:4:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_File_$14_storage_ptr",
-                      "typeString": "struct CID.File"
+                      "typeIdentifier": "t_struct$_file_$14_storage_ptr",
+                      "typeString": "struct File.file"
                     }
                   },
-                  "id": 278,
+                  "id": 277,
                   "length": null,
                   "nodeType": "ArrayTypeName",
-                  "src": "109:6:3",
+                  "src": "134:6:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_File_$14_storage_$dyn_storage_ptr",
-                    "typeString": "struct CID.File[]"
+                    "typeIdentifier": "t_array$_t_struct$_file_$14_storage_$dyn_storage_ptr",
+                    "typeString": "struct File.file[]"
                   }
                 },
                 "value": null,
@@ -161,29 +198,76 @@
             ],
             "name": "user",
             "nodeType": "StructDefinition",
-            "scope": 281,
-            "src": "86:43:3",
+            "scope": 284,
+            "src": "111:43:3",
             "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 283,
+            "name": "users",
+            "nodeType": "VariableDeclaration",
+            "scope": 284,
+            "src": "160:30:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_user_$279_storage_$",
+              "typeString": "mapping(address => struct User.user)"
+            },
+            "typeName": {
+              "id": 282,
+              "keyType": {
+                "id": 280,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "168:7:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "160:24:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_user_$279_storage_$",
+                "typeString": "mapping(address => struct User.user)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 281,
+                "name": "user",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 279,
+                "src": "179:4:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_user_$279_storage_ptr",
+                  "typeString": "struct User.user"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
           }
         ],
-        "scope": 282,
-        "src": "58:74:3"
+        "scope": 285,
+        "src": "58:136:3"
       }
     ],
-    "src": "0:134:3"
+    "src": "0:196:3"
   },
   "legacyAST": {
     "absolutePath": "/G/ETHIndia22/smart-contract/contracts/User.sol",
     "exportedSymbols": {
       "User": [
-        281
+        284
       ]
     },
-    "id": 282,
+    "id": 285,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 273,
+        "id": 269,
         "literals": [
           "solidity",
           ">=",
@@ -199,9 +283,9 @@
       {
         "absolutePath": "/G/ETHIndia22/smart-contract/contracts/File.sol",
         "file": "./File.sol",
-        "id": 274,
+        "id": 270,
         "nodeType": "ImportDirective",
-        "scope": 282,
+        "scope": 285,
         "sourceUnit": 30,
         "src": "34:20:3",
         "symbolAliases": [],
@@ -213,19 +297,19 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 275,
-              "name": "CID",
+              "id": 271,
+              "name": "File",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 29,
-              "src": "75:3:3",
+              "src": "75:4:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_CID_$29",
-                "typeString": "contract CID"
+                "typeIdentifier": "t_contract$_File_$29",
+                "typeString": "contract File"
               }
             },
-            "id": 276,
+            "id": 272,
             "nodeType": "InheritanceSpecifier",
-            "src": "75:3:3"
+            "src": "75:4:3"
           }
         ],
         "contractDependencies": [
@@ -234,51 +318,88 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 281,
+        "id": 284,
         "linearizedBaseContracts": [
-          281,
+          284,
           29
         ],
         "name": "User",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "constant": false,
+            "id": 275,
+            "name": "userArr",
+            "nodeType": "VariableDeclaration",
+            "scope": 284,
+            "src": "87:17:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 273,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "87:7:3",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 274,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "87:9:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
             "canonicalName": "User.user",
-            "id": 280,
+            "id": 279,
             "members": [
               {
                 "constant": false,
-                "id": 279,
+                "id": 278,
                 "name": "files",
                 "nodeType": "VariableDeclaration",
-                "scope": 280,
-                "src": "109:12:3",
+                "scope": 279,
+                "src": "134:12:3",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_File_$14_storage_$dyn_storage_ptr",
-                  "typeString": "struct CID.File[]"
+                  "typeIdentifier": "t_array$_t_struct$_file_$14_storage_$dyn_storage_ptr",
+                  "typeString": "struct File.file[]"
                 },
                 "typeName": {
                   "baseType": {
                     "contractScope": null,
-                    "id": 277,
-                    "name": "File",
+                    "id": 276,
+                    "name": "file",
                     "nodeType": "UserDefinedTypeName",
                     "referencedDeclaration": 14,
-                    "src": "109:4:3",
+                    "src": "134:4:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_File_$14_storage_ptr",
-                      "typeString": "struct CID.File"
+                      "typeIdentifier": "t_struct$_file_$14_storage_ptr",
+                      "typeString": "struct File.file"
                     }
                   },
-                  "id": 278,
+                  "id": 277,
                   "length": null,
                   "nodeType": "ArrayTypeName",
-                  "src": "109:6:3",
+                  "src": "134:6:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_File_$14_storage_$dyn_storage_ptr",
-                    "typeString": "struct CID.File[]"
+                    "typeIdentifier": "t_array$_t_struct$_file_$14_storage_$dyn_storage_ptr",
+                    "typeString": "struct File.file[]"
                   }
                 },
                 "value": null,
@@ -287,16 +408,63 @@
             ],
             "name": "user",
             "nodeType": "StructDefinition",
-            "scope": 281,
-            "src": "86:43:3",
+            "scope": 284,
+            "src": "111:43:3",
             "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 283,
+            "name": "users",
+            "nodeType": "VariableDeclaration",
+            "scope": 284,
+            "src": "160:30:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_user_$279_storage_$",
+              "typeString": "mapping(address => struct User.user)"
+            },
+            "typeName": {
+              "id": 282,
+              "keyType": {
+                "id": 280,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "168:7:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "160:24:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_user_$279_storage_$",
+                "typeString": "mapping(address => struct User.user)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 281,
+                "name": "user",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 279,
+                "src": "179:4:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_user_$279_storage_ptr",
+                  "typeString": "struct User.user"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
           }
         ],
-        "scope": 282,
-        "src": "58:74:3"
+        "scope": 285,
+        "src": "58:136:3"
       }
     ],
-    "src": "0:134:3"
+    "src": "0:196:3"
   },
   "compiler": {
     "name": "solc",
@@ -306,12 +474,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x0b05e70095911b2eccCd1056F193173F0811339c",
-      "transactionHash": "0x0ecd6a8874bf11e6337240f1602e9a481d065700699a1ddbb7edc8d10c00a432"
+      "address": "0x7B7BA7dF5b456E9f373C569e5Ca1eB411F47D55F",
+      "transactionHash": "0xb0fd06cedae89b0e106b5c6a46e46328059c0d157af2068a35226388132ea9f1"
     }
   },
   "schemaVersion": "3.0.2",
-  "updatedAt": "2022-12-03T05:11:38.142Z",
+  "updatedAt": "2022-12-03T05:54:48.789Z",
   "devdoc": {
     "methods": {}
   },

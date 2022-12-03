@@ -1,0 +1,475 @@
+{
+  "contractName": "UserFunctions",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "cid",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "fileType",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "createdAt",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "updatedAt",
+          "type": "uint256"
+        }
+      ],
+      "name": "fileUploaded",
+      "type": "event",
+      "signature": "0x8df9420cffd6cb5150ba152fe465c4eed729479f0faa1d389fd181b74e6e73a6"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "AddUser",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xf7e691dd"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b5060ec8061001e6000396000f3fe608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063f7e691dd146044575b600080fd5b348015604f57600080fd5b5060566058565b005b60003390806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fea165627a7a72305820995e0434419a324972530476971e03314e3fe54f2fc382ae69a247dae67d76cf0029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063f7e691dd146044575b600080fd5b348015604f57600080fd5b5060566058565b005b60003390806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fea165627a7a72305820995e0434419a324972530476971e03314e3fe54f2fc382ae69a247dae67d76cf0029",
+  "sourceMap": "58:110:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;58:110:4;;;;;;;",
+  "deployedSourceMap": "58:110:4:-;;;;;;;;;;;;;;;;;;;;;;;;96:69;;8:9:-1;5:2;;;30:1;27;20:12;5:2;96:69:4;;;;;;;133:7;146:10;133:24;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;133:24:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;96:69::o",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\r\nimport \"./User.sol\";\r\n\r\ncontract UserFunctions is User {\r\n    function AddUser() public {\r\n        userArr.push(msg.sender);\r\n    }\r\n}\r\n",
+  "sourcePath": "G:/ETHIndia22/smart-contract/contracts/UserFunctions.sol",
+  "ast": {
+    "absolutePath": "/G/ETHIndia22/smart-contract/contracts/UserFunctions.sol",
+    "exportedSymbols": {
+      "UserFunctions": [
+        301
+      ]
+    },
+    "id": 302,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 286,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:4"
+      },
+      {
+        "absolutePath": "/G/ETHIndia22/smart-contract/contracts/User.sol",
+        "file": "./User.sol",
+        "id": 287,
+        "nodeType": "ImportDirective",
+        "scope": 302,
+        "sourceUnit": 285,
+        "src": "34:20:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 288,
+              "name": "User",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 284,
+              "src": "84:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_User_$284",
+                "typeString": "contract User"
+              }
+            },
+            "id": 289,
+            "nodeType": "InheritanceSpecifier",
+            "src": "84:4:4"
+          }
+        ],
+        "contractDependencies": [
+          29,
+          284
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 301,
+        "linearizedBaseContracts": [
+          301,
+          284,
+          29
+        ],
+        "name": "UserFunctions",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 299,
+              "nodeType": "Block",
+              "src": "122:43:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 295,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 316,
+                          "src": "146:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 296,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "146:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 292,
+                        "name": "userArr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 275,
+                        "src": "133:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 294,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "133:12:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) returns (uint256)"
+                      }
+                    },
+                    "id": 297,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "133:24:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 298,
+                  "nodeType": "ExpressionStatement",
+                  "src": "133:24:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 300,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "AddUser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 290,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "112:2:4"
+            },
+            "returnParameters": {
+              "id": 291,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "122:0:4"
+            },
+            "scope": 301,
+            "src": "96:69:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 302,
+        "src": "58:110:4"
+      }
+    ],
+    "src": "0:170:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/G/ETHIndia22/smart-contract/contracts/UserFunctions.sol",
+    "exportedSymbols": {
+      "UserFunctions": [
+        301
+      ]
+    },
+    "id": 302,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 286,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:4"
+      },
+      {
+        "absolutePath": "/G/ETHIndia22/smart-contract/contracts/User.sol",
+        "file": "./User.sol",
+        "id": 287,
+        "nodeType": "ImportDirective",
+        "scope": 302,
+        "sourceUnit": 285,
+        "src": "34:20:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 288,
+              "name": "User",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 284,
+              "src": "84:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_User_$284",
+                "typeString": "contract User"
+              }
+            },
+            "id": 289,
+            "nodeType": "InheritanceSpecifier",
+            "src": "84:4:4"
+          }
+        ],
+        "contractDependencies": [
+          29,
+          284
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 301,
+        "linearizedBaseContracts": [
+          301,
+          284,
+          29
+        ],
+        "name": "UserFunctions",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 299,
+              "nodeType": "Block",
+              "src": "122:43:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 295,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 316,
+                          "src": "146:3:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 296,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "146:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 292,
+                        "name": "userArr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 275,
+                        "src": "133:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 294,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "133:12:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) returns (uint256)"
+                      }
+                    },
+                    "id": 297,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "133:24:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 298,
+                  "nodeType": "ExpressionStatement",
+                  "src": "133:24:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 300,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "AddUser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 290,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "112:2:4"
+            },
+            "returnParameters": {
+              "id": 291,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "122:0:4"
+            },
+            "scope": 301,
+            "src": "96:69:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 302,
+        "src": "58:110:4"
+      }
+    ],
+    "src": "0:170:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x79102de13C29048A38bf531087497B1B43aCc701",
+      "transactionHash": "0x88305b3dcf70e32bff1f93296c78af617833e5aee13a2f26d5917c2fdf3c116a"
+    }
+  },
+  "schemaVersion": "3.0.2",
+  "updatedAt": "2022-12-03T05:54:49.651Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
