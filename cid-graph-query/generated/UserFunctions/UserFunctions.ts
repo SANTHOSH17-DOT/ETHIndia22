@@ -70,6 +70,29 @@ export class UserFunctions extends ethereum.SmartContract {
   static bind(address: Address): UserFunctions {
     return new UserFunctions("UserFunctions", address);
   }
+
+  CheckUserExists(user: Address): boolean {
+    let result = super.call(
+      "CheckUserExists",
+      "CheckUserExists(address):(bool)",
+      [ethereum.Value.fromAddress(user)]
+    );
+
+    return result[0].toBoolean();
+  }
+
+  try_CheckUserExists(user: Address): ethereum.CallResult<boolean> {
+    let result = super.tryCall(
+      "CheckUserExists",
+      "CheckUserExists(address):(bool)",
+      [ethereum.Value.fromAddress(user)]
+    );
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBoolean());
+  }
 }
 
 export class AddUserCall extends ethereum.Call {

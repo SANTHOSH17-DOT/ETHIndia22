@@ -51,6 +51,26 @@
     "signature": "0x8df9420cffd6cb5150ba152fe465c4eed729479f0faa1d389fd181b74e6e73a6"
   },
   {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "CheckUserExists",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x3ebed4e5"
+  },
+  {
     "constant": false,
     "inputs": [],
     "name": "AddUser",

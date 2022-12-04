@@ -32,6 +32,5 @@
     }
   ],
   "name": "fileUploaded",
-  "type": "event",
-  "signature": "0x8df9420cffd6cb5150ba152fe465c4eed729479f0faa1d389fd181b74e6e73a6"
+  "type": "event"
 }]
