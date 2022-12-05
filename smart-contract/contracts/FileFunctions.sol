@@ -31,6 +31,14 @@ contract FileFunctions is User {
         users[msg.sender].files.push(
             file(_fileType, name, _cid, false, block.timestamp, block.timestamp)
         );
+        emit fileUploaded(
+            _cid,
+            msg.sender,
+            users[msg.sender].files[findFileIndex(msg.sender, _cid)].fileType,
+            users[msg.sender].files[findFileIndex(msg.sender, _cid)].name,
+            users[msg.sender].files[findFileIndex(msg.sender, _cid)].createdAt,
+            block.timestamp
+        );
     }
 
     function getFiles() public view returns (file[] memory) {
@@ -45,19 +53,5 @@ contract FileFunctions is User {
         users[msg.sender]
             .files[findFileIndex(msg.sender, _cid)]
             .isUploaded = _success;
-        if (_success) {
-            emit fileUploaded(
-                _cid,
-                msg.sender,
-                users[msg.sender]
-                    .files[findFileIndex(msg.sender, _cid)]
-                    .fileType,
-                users[msg.sender].files[findFileIndex(msg.sender, _cid)].name,
-                users[msg.sender]
-                    .files[findFileIndex(msg.sender, _cid)]
-                    .createdAt,
-                block.timestamp
-            );
-        }
     }
 }
