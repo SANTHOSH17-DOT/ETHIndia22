@@ -6,8 +6,8 @@ dataSources:
     name: File
     network: goerli
     source:
-      address: "0xEf872c3e1Cb4E42f221D91566A6652CF635fAAB3"
-      abi: File
+      address: "0x91E6A4f4529A66DD491d0D5102e8Ce8f4c40b655"
+      abi: FileFunctions
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -16,8 +16,8 @@ dataSources:
         - User
         - File
       abis:
-        - name: File
-          file: File\abis\File.json
+        - name: FileFunctions
+          file: File\abis\fileFunctions.json
       eventHandlers:
         - event: fileUploaded(string,address,string,string,uint256,uint256)
           handler: handleFileUpload
@@ -26,7 +26,7 @@ dataSources:
     name: UserFunctions
     network: goerli
     source:
-      address: "0xd6e6D015231Ee21E2fDfE41304043f0451BFB0C3"
+      address: "0x6bbE385cd138c262566a2E860313cD15382CCd11"
       abi: UserFunctions
     mapping:
       kind: ethereum/events
